@@ -1,0 +1,24 @@
+package sortings;
+
+public class QuickSort {
+
+	public static void driver(int arr[]) {
+		
+	}
+	public static void  sort(int arr[], int low, int high, int currentIndex) {
+		
+		if(low<high) {
+			quickSort(arr, low , currentIndex-1);
+			quickSort(arr, low , currentIndex-1);
+		}
+	}
+	private static void quickSort(int[] arr, int low, int i) {
+		// TODO Auto-generated method stub
+		
+	}
+	public static void main(String[] args) {
+		
+	}
+}
+
+

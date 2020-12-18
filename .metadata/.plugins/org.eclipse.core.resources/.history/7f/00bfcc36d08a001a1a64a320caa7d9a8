@@ -1,0 +1,9 @@
+package com.jitendrasaini.tree;
+
+public class BinarySearchTree {
+
+	public void put(BinarySearchTree root ,int data) {
+		if(null == root)
+			return;
+	}
+}

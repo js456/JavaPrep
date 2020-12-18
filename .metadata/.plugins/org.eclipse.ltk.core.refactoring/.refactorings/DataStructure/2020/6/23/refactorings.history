@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.jitendrasaini.tree.DupSub.java&apos; to &apos;DuplicateSubTree.java&apos;&#x0D;&#x0A;- Original project: &apos;DataStructure&apos;&#x0D;&#x0A;- Original element: &apos;com.jitendrasaini.tree.DupSub.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.jitendrasaini.tree.DuplicateSubTree.java&apos;" description="Rename compilation unit &apos;DupSub.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.jitendrasaini.tree{DupSub.java" name="DuplicateSubTree.java" references="false" stamp="1591177390421" version="1.0"/>
+</session>

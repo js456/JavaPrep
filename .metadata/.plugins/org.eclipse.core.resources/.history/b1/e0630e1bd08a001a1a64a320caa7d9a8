@@ -1,0 +1,9 @@
+package com.jitendrasaini.tree;
+
+public class BinarySearchTreeNode {
+
+	private int data;
+	private BinarySearchTreeNode left;
+	private BinarySearchTreeNode right;
+	
+}

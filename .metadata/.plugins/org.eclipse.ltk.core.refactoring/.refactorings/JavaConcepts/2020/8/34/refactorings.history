@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;map&apos; in &apos;java8features.Java8Features.mapStream()&apos; to &apos;treemap&apos;&#x0D;&#x0A;- Original project: &apos;JavaConcepts&apos;&#x0D;&#x0A;- Original element: &apos;java8features.Java8Features.mapStream().map&apos;&#x0D;&#x0A;- Renamed element: &apos;map&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;map&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;java8features{Java8Features.java[Java8Features~mapStream@map!1606!1666!1630!1632!QTreeMap\&lt;QInteger;QInteger;&gt;;!0!false" name="treemap" references="true" stamp="1597764114046" version="1.0"/>
+</session>

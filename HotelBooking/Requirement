@@ -1,0 +1,58 @@
+Hotel Booking
+
+Search a hotel
+Book a hotel
+Cancel booking
+
+
+Actors of the system
+
+User --
+
+
+Admin ---
+System -- 
+
+Hotel has room
+
+Room 
+Single room is a Room
+DoublRoom is a Room
+
+
+Hotel room allocation portal
+on guest arrival choose prefrence
+
+
+Guest
+
+Person
+Customer is a person
+Receptionist is person
+
+Room -- abstract class
+Room has -- RoomAmeneties --
+Single room is a Room
+DoublRoom is a Room
+
+Preference -- builder pattern
+
+Hotel(abstract class) has rooms
+HotelAmeneties
+Facility
+
+Interfaces--
+
+RoomOperations
+checkIn()
+checkInWithPerferences()
+checkout
+addValueAddedService(user,Service)
+
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.jitendrasaini.stringProblems.AllSubstring&apos; to &apos;AllSubSequensestring&apos;&#x0D;&#x0A;- Original project: &apos;DataStructure&apos;&#x0D;&#x0A;- Original element: &apos;com.jitendrasaini.stringProblems.AllSubstring&apos;&#x0D;&#x0A;- Renamed element: &apos;com.jitendrasaini.stringProblems.AllSubSequensestring&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;AllSubstring&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.jitendrasaini.stringProblems{AllSubstring.java[AllSubstring" matchStrategy="1" name="AllSubSequensestring" qualified="false" references="true" similarDeclarations="false" stamp="1592424507648" textual="false" version="1.0"/>
+</session>

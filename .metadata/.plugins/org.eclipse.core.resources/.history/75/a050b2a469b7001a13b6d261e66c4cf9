@@ -1,0 +1,58 @@
+package com.jitendrasaini.dynamicProgramming;
+
+public class ZeroOneKnapsackProblem {
+
+	public static int matrix[][];
+	public static void initializeMatrix(int row, int column) {
+		matrix = new int[row+1][column+1];
+		for(int i =0;i<=row;i++) {
+			for(int j =0;j<=column;j++) {
+				if(i ==0||j==0)
+					matrix[i][j]=0;
+				else
+					matrix[i][j]=-1;
+			}
+		}
+	}
+	public static int maxProfit(int []weightArr,int []profit, int capacity, int n ) {
+		if(capacity ==0 || n ==0 ) {
+			return 0;
+		}
+		if(matrix[n-1][capacity]!=-1)
+			return matrix[n-1][capacity];
+		if (capacity >= weightArr[n - 1]) {
+			matrix[n - 1][capacity] = Integer.max(
+					profit[n - 1] + maxProfit(weightArr, profit, capacity - weightArr[n - 1], n - 1),
+					maxProfit(weightArr, profit, capacity, n - 1));
+			return matrix[n-1][capacity];
+		}else {
+			matrix[n-1][capacity] = maxProfit(weightArr, profit, capacity, n-1);
+			return matrix[n-1][capacity];
+		}
+	}
+	public static void maxProfitTopDown(int []weightArr,int []profit, int capacity, int n ) {
+		if(capacity ==0 || n ==0 ) {
+			return ;
+		}
+		for(int i = 1;i<profit.length+1;i++) {
+			for(int j =1;j<capacity+1;j++) {
+				if (weightArr[i-1]<=j) {
+					matrix[i][j] = Integer.max(
+							profit[i-1] + matrix[i-1][j-weightArr[i-1]],
+							matrix[i-1][j]);
+				}else {
+					matrix[i][j] = matrix[i-1][j];
+				}
+			}
+		}
+
+	}
+	public static void main(String[] args) {
+		int []weightArr = {2, 3, 1, 4 };
+		int []profit = { 4, 5, 3, 7 };
+		int capacity = 5;
+		initializeMatrix(profit.length, capacity);
+		maxProfitTopDown(weightArr, profit, capacity, weightArr.length);
+		System.out.println(matrix[profit.length][capacity]);
+	}
+}

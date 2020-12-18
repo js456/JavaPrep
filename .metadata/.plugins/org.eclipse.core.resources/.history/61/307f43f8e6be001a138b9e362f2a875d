@@ -1,0 +1,30 @@
+package sortings;
+
+public class QuickSort {
+
+	public static void driver(int arr[]) {
+		
+	}
+	public static void  sort(int arr[], int low, int high, int currentIndex, int pivot) {
+		
+		if(low<high) {
+			quickSort(arr, low , currentIndex-1);
+			arr[currentIndex] = pivot;
+			quickSort(arr, low , currentIndex-1);
+		}
+	}
+	public static void swap(int arr[], int i, int j) {
+		int temp = arr[i];
+		arr[i]= arr[j];
+		arr[j]= temp;
+	}
+	private static void quickSort(int[] arr, int low, int i) {
+		int pivot = arr[arr.length-1];
+		
+	}
+	public static void main(String[] args) {
+		
+	}
+}
+
+

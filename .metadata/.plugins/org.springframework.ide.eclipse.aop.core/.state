@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="productCatalogue"/>
+<aop-project name="b2c-ecommerce"/>
+<aop-project name="SpringBootDocker"/>
+<aop-project name="sapient_machine_coding"/>
+<aop-project name="AuthenticationSSO"/>
+</aop-reference-model>

@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>JunitMokitoTutorial</groupId>
+  <artifactId>JunitMokitoTutorial</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  	<properties>
+		<junit.jupiter.version>5.6.2</junit.jupiter.version>
+		<junit.jupiter.mockito.version>3.3.3</junit.jupiter.mockito.version>
+		<junit.platform.runner.version>1.6.2</junit.platform.runner.version>
+		<junit.vintage.version>5.7.0-M1</junit.vintage.version>
+		<junit.powermock.version>2.0.7</junit.powermock.version>
+		
+	</properties>
+	
+			<dependencies>
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-engine</artifactId>
+				<version>${junit.jupiter.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.junit.platform</groupId>
+				<artifactId>junit-platform-runner</artifactId>
+				<version>${junit.platform.runner.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-junit-jupiter</artifactId>
+				<version>${junit.jupiter.mockito.version}</version>
+				<scope>test</scope>
+			</dependency>	
+			
+ 			<dependency>
+			   <groupId>org.powermock</groupId>
+			   <artifactId>powermock-module-junit4</artifactId>
+			   <version>${junit.powermock.version}</version>
+			   <scope>test</scope>
+			</dependency>
+			
+			<dependency>
+			   <groupId>org.powermock</groupId>
+			   <artifactId>powermock-api-mockito2</artifactId>
+			   <version>${junit.powermock.version}</version>
+			   <scope>test</scope>
+			</dependency>	
+			
+			<dependency>
+				<groupId>org.junit.vintage</groupId>
+				<artifactId>junit-vintage-engine</artifactId>
+				<version>${junit.vintage.version}</version>
+				<scope>test</scope>			
+			</dependency>	
+			
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-module-junit4-rule-agent</artifactId>
+				<version>${junit.powermock.version}</version>
+				<scope>test</scope>
+			</dependency>			
+		</dependencies>
+</project>

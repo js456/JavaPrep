@@ -1,0 +1,14 @@
+package sortings;
+
+public class QuickSort {
+
+	public static void driver(int arr[]) {
+		
+	}
+	public static void  sort() {
+		
+	}
+	public static void main(String[] args) {
+		
+	}
+}

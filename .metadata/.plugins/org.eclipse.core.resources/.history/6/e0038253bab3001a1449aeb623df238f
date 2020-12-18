@@ -1,0 +1,21 @@
+package com.jitendrasaini.dynamicProgramming;
+
+public class ZeroOneKnapsackProblem {
+
+	public static int maxProfit(int []weightArr,int []profit, int capacity, int n ) {
+		if(capacity ==0 || n ==0 ) {
+			return 0;
+		}
+		if(capacity>=weightArr[n-1]) {
+			return Integer.max(profit[n-1]+maxProfit(weightArr, profit, capacity-weightArr[n-1], n-1), maxProfit(weightArr, profit, capacity, n-1));
+		}else {
+			return maxProfit(weightArr, profit, capacity, n-1);
+		}
+	}
+	public static void main(String[] args) {
+		int []weightArr = {2, 3, 1, 4 };
+		int []profit = { 4, 5, 3, 7 };
+		int capacity = 5;
+		System.out.println(maxProfit(weightArr, profit, capacity, weightArr.length));
+	}
+}

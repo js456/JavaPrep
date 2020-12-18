@@ -1,0 +1,10 @@
+package graphs;
+
+public class DisjointSetDetectCycle {
+
+}
+
+
+class Edge{
+	int src,dest;
+}

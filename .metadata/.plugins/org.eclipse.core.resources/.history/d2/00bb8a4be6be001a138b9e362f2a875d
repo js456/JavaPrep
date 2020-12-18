@@ -1,0 +1,19 @@
+package sortings;
+
+public class QuickSort {
+
+	public static void driver(int arr[]) {
+		
+	}
+	public static void  sort(int arr[], int low, int high, int currentIndex) {
+		
+		if(low<high) {
+			quickSort(arr, , )
+		}
+	}
+	public static void main(String[] args) {
+		
+	}
+}
+
+

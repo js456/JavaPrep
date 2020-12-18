@@ -1,0 +1,12 @@
+family\model\FamilyManagerInput.class
+family\controller\FamilyMainController.class
+family\service\FamilyRelationManager.class
+family\main\Geektrust.class
+family\model\FamilyManagerResponse.class
+family\model\Gender.class
+family\util\FamilyServiceUtil.class
+family\model\FamilyNode.class
+family\model\FamilyManagerResult.class
+family\controller\AbstractRelationshipManager.class
+family\service\FamilyHolder.class
+family\service\FamilyControllerImpl.class

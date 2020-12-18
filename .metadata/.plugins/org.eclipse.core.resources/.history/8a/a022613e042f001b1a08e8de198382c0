@@ -1,0 +1,24 @@
+package multithreading;
+
+public class ThreadTask implements Runnable{
+
+	@Override
+	public void run() {
+		
+		System.out.println("Excuting thread task");
+		
+	}
+
+	public static void main(String[] args) {
+		
+		String str = "A";
+		
+		System.out.println(str.charAt(0));
+		
+		String dsReferenceNumber = "3DS_LOA_DIS_VISA";
+		
+	       if (dsReferenceNumber.contains(PEConstants.DS_REF_COMMON_PATTERN)) {
+	          dsReferenceNumber = dsReferenceNumber.substring(0, dsReferenceNumber.indexOf("_", 12));
+	       }
+	}
+}

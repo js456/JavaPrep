@@ -1,0 +1,33 @@
+package com.jitendrasaini.tree;
+
+public class BinarySearchTree {
+
+	public void put(BinarySearchTreeNode root, int data) {
+		if (null == root)
+			return;
+		if (data < root.getData()) {
+			if (null != root.getLeft())
+				put(root.getLeft(), data);
+			else {
+				BinarySearchTreeNode tempNode = new BinarySearchTreeNode();
+				tempNode.setData(data);
+				root.setLeft(tempNode);
+			}
+		}
+		if (data > root.getData()) {
+			if (null != root.getRight()) {
+				put(root.getRight(), data);
+			} else {
+				BinarySearchTreeNode tempNode = new BinarySearchTreeNode();
+				tempNode.setData(data);
+				root.setRight(tempNode);
+			}
+		}
+	}
+	
+	public BinarySearchTreeNode get(BinarySearchTreeNode root, int data) {
+		if (null == root || data == root.getData())
+			return root;
+		return data < root.getData()?get(root.getLeft(), data):get(root.getRight(), data);
+	}
+}

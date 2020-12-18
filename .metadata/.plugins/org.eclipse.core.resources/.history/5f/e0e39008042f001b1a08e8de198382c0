@@ -1,0 +1,18 @@
+package multithreading;
+
+public class ThreadTask implements Runnable{
+
+	@Override
+	public void run() {
+		
+		System.out.println("Excuting thread task");
+		
+	}
+
+	public static void main(String[] args) {
+		
+		String str = "A";
+		
+		System.out.println(str.charAt(0));
+	}
+}

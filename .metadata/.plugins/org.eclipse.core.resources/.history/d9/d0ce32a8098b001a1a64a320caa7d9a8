@@ -1,0 +1,99 @@
+package com.jitendrasaini.tree;
+
+public class BinarySearchTree {
+
+	public void put(BinarySearchTreeNode root, int data) {
+		if (null == root)
+			return;
+		if (data < root.getData()) {
+			if (null != root.getLeft())
+				put(root.getLeft(), data);
+			else {
+				BinarySearchTreeNode tempNode = new BinarySearchTreeNode();
+				tempNode.setData(data);
+				root.setLeft(tempNode);
+			}
+		}
+		if (data > root.getData()) {
+			if (null != root.getRight()) {
+				put(root.getRight(), data);
+			} else {
+				BinarySearchTreeNode tempNode = new BinarySearchTreeNode();
+				tempNode.setData(data);
+				root.setRight(tempNode);
+			}
+		}
+	}
+	
+	public BinarySearchTreeNode get(BinarySearchTreeNode root, int data) {
+		if (null == root || data == root.getData())
+			return root;
+		return data < root.getData()?get(root.getLeft(), data):get(root.getRight(), data);
+	}
+	
+	public boolean remove(BinarySearchTreeNode root, int data) {
+		BinarySearchTreeNode parentNode = root;
+		BinarySearchTreeNode currentNode = root;
+		boolean isRightChild = false;
+		while(currentNode.getData() == data) {
+			parentNode = currentNode;
+			if(data < currentNode.getData()) {
+				currentNode = currentNode.getLeft();
+				isRightChild = false;
+			}
+			else if (data > currentNode.getData()) {
+				currentNode = currentNode.getRight();
+				isRightChild= true;
+			}
+		}
+		//delete if node doesn't have any child
+		if (null == currentNode.getLeft() && null == currentNode.getRight()) {
+			// Check if Node to be deleted is root
+			if (currentNode == root) {
+				root = null;
+				return true;
+			}
+			if (isRightChild)
+				parentNode.setRight(null);
+			else
+				parentNode.setLeft(null);
+			return true;
+		}
+		if(null == currentNode.getLeft() || null == currentNode.getRight()) {
+			// If the left element is not null
+			if(null != currentNode.getLeft()) {
+				if(currentNode == parentNode.getLeft())
+					parentNode.setLeft(currentNode.getLeft());
+				else
+					parentNode.setRight(currentNode.getLeft());
+			}else {
+				if(currentNode == parentNode.getLeft())
+					parentNode.setLeft(currentNode.getRight());
+				else
+					parentNode.setRight(currentNode.getRight());
+			}
+			return true;
+		}
+		return true;
+		
+	}
+	
+	public BinarySearchTreeNode getSuccessor(BinarySearchTreeNode root) {
+		BinarySearchTreeNode parentNode = null;
+		BinarySearchTreeNode currentNode = root.getRight();
+		BinarySearchTreeNode resultNode = null;
+		while (currentNode.getLeft() != null) {
+			parentNode = resultNode;
+			resultNode = currentNode;
+			currentNode = currentNode.getLeft();
+		}
+
+		if (currentNode.getRight() != null) {
+			parentNode.setLeft(resultNode.getRight());
+			resultNode.setRight(root.getRight());
+
+		}
+		return resultNode;
+	}
+	
+}

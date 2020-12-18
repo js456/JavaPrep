@@ -1,0 +1,24 @@
+package graphs;
+
+public class DisjointSetDetectCycle {
+
+}
+
+
+class Edge{
+	int src,dest;
+}
+
+class Graph{
+	int V,E;
+	Edge []edges;
+	
+	public Graph(int v, int e) {
+		edges = new Edge[e];
+		this.E= e;
+		this.V= v;
+		for(int i=0;i<e;i++) {
+			edges[i]= new Edge();
+		}
+	}
+}
